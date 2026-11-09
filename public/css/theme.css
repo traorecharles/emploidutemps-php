@@ -1,0 +1,218 @@
+:root {
+    /* Couleur principale */
+    --primary-color: #C5C400;
+    --primary-light: #d6d533;
+    --primary-dark: #999900;
+
+    /* Couleurs complémentaires */
+    --secondary-color: #4A4A00;
+    --accent-color: #8B8B00;
+
+    /* Couleurs neutres */
+    --background-light: #FAFAFA;
+    --background-dark: #F0F0F0;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+
+    /* Couleurs de statut */
+    --success-color: #4CAF50;
+    --error-color: #F44336;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
+
+    /* Couleurs pour les boutons */
+    --button-primary: var(--primary-color);
+    --button-primary-hover: var(--primary-light);
+    --button-text: white;
+
+    /* Ombres */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    /* Bordures */
+    --border-radius: 4px;
+    --border-color: #E0E0E0;
+}
+
+/* Classes utilitaires pour les couleurs */
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-light { background-color: var(--background-light); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-light { color: var(--background-light); }
+
+/* Style de base pour les boutons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--button-primary);
+    color: var(--button-text);
+}
+
+.btn-primary:hover {
+    background-color: var(--button-primary-hover);
+}
+
+/* Style pour les cartes */
+.card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+/* Style pour les en-têtes de section */
+.section-header {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style pour la barre de navigation */
+.navbar.navbar-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar.navbar-custom .navbar-brand,
+.navbar.navbar-custom .nav-link {
+    color: var(--text-primary);
+}
+
+.navbar.navbar-custom .nav-link:hover,
+.navbar.navbar-custom .nav-link:focus {
+    color: var(--background-light);
+}
+
+.navbar.navbar-custom .nav-link.active {
+    color: var(--background-light);
+    font-weight: bold;
+}
+
+.navbar.navbar-custom .navbar-toggler {
+    border-color: var(--text-primary);
+}
+
+.navbar.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 33, 33, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Style pour le conteneur des formulaires d'authentification */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour les formulaires d'authentification */
+.auth-form {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form .form-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.auth-form .form-control {
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 0;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-form .form-control:focus {
+    box-shadow: none;
+    border-bottom-color: var(--primary-color);
+}
+
+.auth-form .form-control::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.auth-form .row {
+    margin: 0 -1rem;
+}
+
+.auth-form .col-md-6 {
+    padding: 0 1rem;
+}
+
+.auth-form .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.auth-form .btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.auth-form .form-text {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.auth-form .alert {
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Import de la police Jaapokki */
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('/php_calendrier/font/jaapokki/Jaapokki-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('/php_calendrier/font/jaapokki/Jaapokkienchance-Regular.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('/php_calendrier/font/jaapokki/Jaapokkisubtract-Regular.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body, html {
+    font-family: 'Jaapokki', Arial, Helvetica, sans-serif;
+} 
